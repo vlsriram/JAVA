@@ -73,3 +73,143 @@ public class SumEvenOrOdd {
         }
     }
 }
+To print the pattern:
+public class PrintPattern {
+    public static void main(String[] args) {
+        char ch = 'A';
+        for (int i = 1; i <= 5; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(ch);
+            }
+            System.out.println();
+            ch++;
+        }
+    }
+}
+To display the pattern:
+public class DisplayPattern {
+    public static void main(String[] args) {
+        char[] chars = {'@', '?', '>'};
+        for (char ch : chars) {
+            for (int i = 0; i < 3; i++) {
+                System.out.print(ch + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+To find the popular element in an array:
+import java.util.HashMap;
+import java.util.Map;
+
+public class PopularElement {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 2, 3, 3, 3, 4, 4, 4, 4};
+        int N = arr.length;
+        int threshold = N / 4;
+        
+        HashMap<Integer, Integer> countMap = new HashMap<>();
+        for (int num : arr) {
+            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
+        }
+        
+        boolean found = false;
+        for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
+            if (entry.getValue() > threshold) {
+                System.out.println("Popular element: " + entry.getKey());
+                found = true;
+                break;
+            }
+        }
+        
+        if (!found) {
+            System.out.println("-1");
+        }
+    }
+}
+To check if a string is a complete string:
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class CompleteString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine().toLowerCase();
+
+        HashSet<Character> charSet = new HashSet<>();
+        for (char ch : input.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                charSet.add(ch);
+            }
+        }
+
+        if (charSet.size() == 26) {
+            System.out.println("Yes, it's a complete string");
+        } else {
+            System.out.println("No, it's not a complete string");
+        }
+    }
+}
+To display the pattern for the input "ALPHA":
+import java.util.Scanner;
+
+public class DisplayPatternFromString {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a string: ");
+        String input = scanner.nextLine();
+
+        for (int i = 1; i <= input.length(); i++) {
+            System.out.println(input.substring(0, i));
+        }
+    }
+}
+Print all numbers from 1 to 100
+public class PrintNumbers {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 100; i++) {
+            System.out.print(i + " ");
+        }
+        System.out.println(); // to move to the next line after printing all numbers
+    }
+}
+Print alternate numbers starting from 1 to 99:
+public class PrintAlternateNumbers {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 99; i += 2) {
+            System.out.print(i + " ");
+        }
+        System.out.println(); // to move to the next line after printing all numbers
+    }
+}
+Print alternate numbers starting from 0 to 100:
+java
+public class PrintAlternateNumbersFromZero {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 100; i += 2) {
+            System.out.print(i + " ");
+        }
+        System.out.println(); // to move to the next line after printing all numbers
+    }
+}
+Print all numbers backwards from 100 to 0:
+public class PrintNumbersBackwards {
+    public static void main(String[] args) {
+        for (int i = 100; i >= 0; i--) {
+            System.out.print(i + " ");
+        }
+        System.out.println(); // to move to the next line after printing all numbers
+    }
+}
+Print numbers backwards from 100 to 1 by skipping 2 numbers:
+java
+public class PrintNumbersBackwardsSkipping {
+    public static void main(String[] args) {
+        for (int i = 100; i >= 1; i -= 3) {
+            System.out.print(i + " ");
+        }
+        System.out.println(); // to move to the next line after printing all numbers
+    }
+}
+
