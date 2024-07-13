@@ -1,0 +1,75 @@
+To accept a number N and print whether it is positive, negative, or zero:
+import java.util.Scanner;
+
+public class NumberSign {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int N = scanner.nextInt();
+
+        if (N > 0) {
+            System.out.println("The number is positive.");
+        } else if (N < 0) {
+            System.out.println("The number is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+    }
+}
+To accept two numbers and print the greater value of the two:
+import java.util.Scanner;
+
+public class GreaterValue {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        if (num1 > num2) {
+            System.out.println("The greater number is: " + num1);
+        } else if (num2 > num1) {
+            System.out.println("The greater number is: " + num2);
+        } else {
+            System.out.println("Both numbers are equal.");
+        }
+    }
+}
+To accept a number N and print whether the number is EVEN or ODD:
+java
+import java.util.Scanner;
+
+public class EvenOrOdd {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int N = scanner.nextInt();
+
+        if (N % 2 == 0) {
+            System.out.println("The number is EVEN.");
+        } else {
+            System.out.println("The number is ODD.");
+        }
+    }
+}
+To accept two numbers and print whether their sum is EVEN or ODD:
+import java.util.Scanner;
+
+public class SumEvenOrOdd {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        int sum = num1 + num2;
+
+        if (sum % 2 == 0) {
+            System.out.println("The sum is EVEN.");
+        } else {
+            System.out.println("The sum is ODD.");
+        }
+    }
+}
